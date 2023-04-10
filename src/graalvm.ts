@@ -124,13 +124,13 @@ function determineGraalVMIdentifier(
   version: string,
   javaVersion: string
 ): string {
-  return `graalvm-${isEE ? 'ee' : 'ce'}-java${javaVersion}-${
+  return `graalvm-${isEE ? 'ee' : 'community'}-java${javaVersion}-${
     c.GRAALVM_PLATFORM
   }-${c.GRAALVM_ARCH}-${version}`
 }
 
 function determineToolName(isEE: boolean, javaVersion: string): string {
-  return `graalvm-${isEE ? 'ee' : 'ce'}-java${javaVersion}-${
+  return `graalvm-${isEE ? 'ee' : 'community'}-java${javaVersion}-${
     c.GRAALVM_PLATFORM
   }`
 }

@@ -74792,10 +74792,10 @@ function findDownloadUrl(release, javaVersion) {
     throw new Error(`Could not find GraalVM dev build for Java ${javaVersion}. It may no longer be available, so please consider upgrading the Java version. If you think this is a mistake, please file an issue at: https://github.com/graalvm/setup-graalvm/issues.`);
 }
 function determineGraalVMIdentifier(isEE, version, javaVersion) {
-    return `graalvm-${isEE ? 'ee' : 'ce'}-java${javaVersion}-${c.GRAALVM_PLATFORM}-${c.GRAALVM_ARCH}-${version}`;
+    return `graalvm-${isEE ? 'ee' : 'community'}-java${javaVersion}-${c.GRAALVM_PLATFORM}-${c.GRAALVM_ARCH}-${version}`;
 }
 function determineToolName(isEE, javaVersion) {
-    return `graalvm-${isEE ? 'ee' : 'ce'}-java${javaVersion}-${c.GRAALVM_PLATFORM}`;
+    return `graalvm-${isEE ? 'ee' : 'community'}-java${javaVersion}-${c.GRAALVM_PLATFORM}`;
 }
 function downloadGraalVMCE(version, javaVersion) {
     return __awaiter(this, void 0, void 0, function* () {
